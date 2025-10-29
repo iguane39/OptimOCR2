@@ -260,6 +260,39 @@ class Config:
     LOG_RETENTION = '1 week'
 
     # ========================================================================
+    # ADVANCED ENHANCEMENT SETTINGS
+    # ========================================================================
+
+    # Image Enhancement
+    USE_ADVANCED_BINARIZATION = True  # Use Sauvola/Niblack instead of simple Otsu
+    USE_PERSPECTIVE_CORRECTION = True  # Auto-detect and correct perspective
+    USE_SHADOW_REMOVAL = True  # Remove shadows and uneven illumination
+    BINARIZATION_METHOD = 'auto'  # Options: 'auto', 'sauvola', 'niblack', 'otsu'
+
+    # Multi-pass OCR
+    USE_MULTI_RESOLUTION = False  # Test multiple DPIs (slower but more accurate)
+    MULTI_RESOLUTION_DPIS = [300, 600, 900]  # DPIs to test
+    USE_MULTI_ANGLE = False  # Test multiple rotations (slower but handles rotated docs)
+    TEST_ANGLES = [0, 90, 180, 270, -5, 5]  # Angles to test in degrees
+
+    # Ensemble OCR
+    USE_ENSEMBLE_OCR = False  # Use multiple OCR engines (requires EasyOCR)
+    ENSEMBLE_ENGINES = ['tesseract', 'easyocr']  # Engines to combine
+    ENSEMBLE_STRATEGY = 'confidence'  # Options: 'voting', 'confidence', 'best'
+
+    # Smart Correction
+    USE_SMART_CORRECTION = True  # Use advanced text correction
+    USE_ADAPTIVE_DICTIONARY = True  # Learn vocabulary from documents
+    USE_NGRAM_CORRECTION = True  # Use n-gram based correction
+    USE_CONTEXTUAL_CORRECTION = False  # Use transformer models (requires transformers)
+    NGRAM_SIZE = 3  # Size of n-grams (3 = trigrams)
+
+    # Document Analysis
+    AUTO_DETECT_DOCUMENT_TYPE = True  # Detect and optimize for document type
+    USE_TABLE_EXTRACTION = False  # Extract table structures (experimental)
+    OPTIMIZE_FOR_DOCUMENT_TYPE = True  # Apply type-specific optimizations
+
+    # ========================================================================
     # FEATURE FLAGS
     # ========================================================================
 
@@ -279,6 +312,11 @@ class Config:
             'preprocessing': False,
             'text_correction': False,
             'font_detection': False,
+            'advanced_binarization': False,
+            'multi_resolution': False,
+            'multi_angle': False,
+            'ensemble_ocr': False,
+            'smart_correction': False,
         },
         'balanced': {
             'dpi': 600,
@@ -286,6 +324,11 @@ class Config:
             'preprocessing': True,
             'text_correction': True,
             'font_detection': True,
+            'advanced_binarization': True,
+            'multi_resolution': False,
+            'multi_angle': False,
+            'ensemble_ocr': False,
+            'smart_correction': True,
         },
         'quality': {
             'dpi': 1200,
@@ -293,6 +336,23 @@ class Config:
             'preprocessing': True,
             'text_correction': True,
             'font_detection': True,
+            'advanced_binarization': True,
+            'multi_resolution': True,
+            'multi_angle': False,
+            'ensemble_ocr': True,
+            'smart_correction': True,
+        },
+        'ultra': {
+            'dpi': 1200,
+            'ocr_engine': 'both',
+            'preprocessing': True,
+            'text_correction': True,
+            'font_detection': True,
+            'advanced_binarization': True,
+            'multi_resolution': True,
+            'multi_angle': True,
+            'ensemble_ocr': True,
+            'smart_correction': True,
         },
     }
 

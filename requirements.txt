@@ -15,13 +15,15 @@ tqdm>=4.66.0
 # Logging
 loguru>=0.7.0
 
-# Optional: Advanced OCR (uncomment if needed)
-# easyocr>=1.7.0
-# paddleocr>=2.7.0
+# Advanced OCR Engines (optional but recommended)
+easyocr>=1.7.0  # Uncomment for EasyOCR support (GPU acceleration available)
+# paddleocr>=2.7.0  # Alternative OCR engine
 
-# Optional: Text Correction and NLP (uncomment if needed)
-# spacy>=3.7.0
-# language-tool-python>=2.7.1
+# Text Correction and NLP (optional but recommended)
+# spacy>=3.7.0  # Uncomment for contextual correction
+# language-tool-python>=2.7.1  # Uncomment for advanced spell checking
+# transformers>=4.30.0  # Uncomment for transformer-based contextual correction
+# torch>=2.0.0  # Required for transformers
 
 # Font Analysis
 fonttools>=4.43.0

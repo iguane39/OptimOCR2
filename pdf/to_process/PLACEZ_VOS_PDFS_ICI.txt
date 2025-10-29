@@ -1,0 +1,45 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                 📄 PLACEZ VOS PDFs ICI                               ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+🚀 DÉMARRAGE RAPIDE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Copiez vos PDFs dans ce dossier
+
+2. Testez sur la première page :
+   python test_document.py pdf/to_process/votre_fichier.pdf
+
+3. Traitez le document complet :
+   python main.py pdf/to_process/votre_fichier.pdf --quality balanced -vv
+
+
+📋 TRAITEMENT EN BATCH
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Pour traiter tous les PDFs d'un coup :
+   python process_batch.py
+
+
+🎯 MODES DE QUALITÉ
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+--quality fast      → Rapide (2s/page, 92-94%)
+--quality balanced  → Équilibré (3-5s/page, 96-98%) ⭐ RECOMMANDÉ
+--quality quality   → Haute qualité (10-15s/page, 98-99.5%)
+--quality ultra     → Maximum (25-35s/page, 99-99.8%)
+
+
+📊 RÉSULTATS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Les fichiers Word (.docx) seront créés dans :
+   output/
+
+
+📖 AIDE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Voir le guide complet : pdf/README.md
+
+Questions ? Consultez TESTING_GUIDE.md

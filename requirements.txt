@@ -1,0 +1,50 @@
+# Core OCR and Image Processing
+pytesseract>=0.3.10
+pdf2image>=1.16.3
+Pillow>=10.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Document Generation
+python-docx>=1.1.0
+
+# CLI Interface
+click>=8.1.0
+tqdm>=4.66.0
+
+# Logging
+loguru>=0.7.0
+
+# Optional: Advanced OCR (uncomment if needed)
+# easyocr>=1.7.0
+# paddleocr>=2.7.0
+
+# Optional: Text Correction and NLP (uncomment if needed)
+# spacy>=3.7.0
+# language-tool-python>=2.7.1
+
+# Font Analysis
+fonttools>=4.43.0
+
+# Machine Learning (for clustering and analysis)
+scikit-learn>=1.3.0
+
+# Image Enhancement
+scipy>=1.11.0
+
+# Configuration Management
+pyyaml>=6.0.1
+
+# Testing (development)
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.1
+
+# Code Quality (development)
+black>=23.7.0
+flake8>=6.1.0
+mypy>=1.5.0
+
+# Documentation (development)
+sphinx>=7.2.0
+sphinx-rtd-theme>=1.3.0
